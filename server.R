@@ -92,8 +92,11 @@ server <- function(input, output) {
   })
  
  output$mytable = DT::renderDataTable({
-   datatable(College, rownames = TRUE,
-             options = list(bPaginate = FALSE, searching = TRUE, info = FALSE),
+   datatable(College, extensions = 'FixedColumns', rownames = TRUE,
+             options = list(bPaginate = FALSE, searching = TRUE, info = FALSE,
+                            dom = 't',
+                            scrollX = TRUE,
+                            fixedColumns = TRUE),
              fillContainer = TRUE) })
   
 }
