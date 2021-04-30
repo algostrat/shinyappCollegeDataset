@@ -6,6 +6,9 @@ attach(College)
 cols = colnames(College)
 cols = cols[cols !="Private"]
 library(shinythemes)
+library(DT)
+
+
 cols
 names = c("Applications recieved","Applications accepted", "Number of new enrollees", "Number of top 10% students",
           "Number of top 25% students", "Fulltime undergrads", "Partime undergrads", "Out of state tuition",
@@ -32,10 +35,19 @@ ui <- fluidPage(
                   names, selected = "Number of top 10% students"),
       selectInput(inputId = "linetype", "Choose fit", c('smooth','linear')),
       checkboxInput("privatesplit", "Group by private/public")
+      #,  
+      #tags$head(
+      #  tags$style(type="text/css", "select { max-width: 300px; }"),
+      #  tags$style(type="text/css", ".span4 { max-width: 300px; }"),
+      #  tags$style(type="text/css", ".well { max-width: 280px; }")
+      #)
     ),
     mainPanel(
      # h1("regression"),
-      plotOutput("plot")
+      plotOutput("plot"),
+      DT::dataTableOutput("mytable",height="400px")
+      
+      
       )
     )
   )
@@ -78,6 +90,11 @@ server <- function(input, output) {
     }
    g
   })
+ 
+ output$mytable = DT::renderDataTable({
+   datatable(College, rownames = TRUE,
+             options = list(bPaginate = FALSE, searching = TRUE, info = FALSE),
+             fillContainer = TRUE) })
   
 }
 
