@@ -15,12 +15,25 @@ install.packages('shiny')
 library(shiny)
 shiny::runGitHub("shinyappCollegeDataset", "algostrat", ref="main", destdir = <your directory choice of choice>)
 ```
-## Description
+## Description of website
 The user is first presented with a plotted linear regression model showing the plotted data points and fitted line. The user can modify the regresssion line through the model options menu box to the left of the plot. In the model options, a default setting is shown which buids and plots a model relating the number of students who were top 10% in their highschool to their college's out of state tuition price. The user can select any regressor(y-axis) and predictor(x-axis) feature to create and plot a model on the the graph to the right. In the model options is the choice to choose between a linear model and a smoothed loess regression model. Lastly, there is an option to split the data into private/public subset to see how the data and models behave differently between colleges that are private and those that are public. A legend is shown at the top of the plot indicating which color model fit(line) 
 
 Below the plot for the regression model and model options menu is a data table showing the entire data set. A user can click on the arrows of any column header to sort Colleges by increasing/decreasing value for that feature. The user can also scroll left/right and up/down to see the entire data of 777 obervations and 18 variables while still seeing the fixed column of college names. 
 
 Below the table is more information including the list of variable names used in the data table, a decription of the datset, and a citation. This same information is provided in this readme.
+
+## Decription of repository and code
+
+- ui.R 
+This file contains the front end visual components. The page contains a navigation bar used as just a placeholder for the name of the dataset used. A header for the first components follows, titled "Explore linear relationships in college data". The entire site is nested into a side bar layout which is further nested into the sidebar panel and main panel. The sidebar panel, titled "model options" provides two select inputs for the regressor/predictor variables, a select input for the model fit type (smooth or linear), and a checkbox to split the data into the categorical "private" or "public" subsets. 
+In the main panel exists a header for the datatable, the datatable itself, a list of the variables used and their definitions (taken from rdocumention). Next in the main panel is a section describing the source of the data, followed by a reference of links to this repository, the package dataset authors' website, and a link to an rdocumentation link for the dataset. Last is the reference to the authors of the ISLR package and corresponding book.
+
+- global.R
+The global file checks for package dependencies and installs them in needed. This file also load in the data and performs the necessary modification relevant to getting the column names. In detail, we drop the categorical variable "Private" in order to not regress or predict on it and instead provide it as a way to only subset the data into separate plotted models. 
+
+- server.R
+
+
 
 ## Variables in the College dataset 
 (Taken from R's help(College) function)
