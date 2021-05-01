@@ -8,8 +8,8 @@ source("global.R")
 ui <- fluidPage(
   #shinythemes::themeSelector(),
   theme = shinytheme('united'),
-  navbarPage("Explore linear relationships in college data"),
-  titlePanel("U.S. News and World Report's College Data"),
+  navbarPage("U.S. News and World Report's College Data"),
+  titlePanel("Explore linear relationships in college data"),
   br(),
   sidebarLayout(
     sidebarPanel(
