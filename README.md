@@ -1,6 +1,11 @@
 # Shiny App College dataset 
  This project demostrates and explores combinations of linear relationships between features within the 'College' dataset provided by R's ISLR package and the News and World Report issue from 1995. Model options and a sortable datable of all the dataset is provided as well as a key for column features and descriptions. The College data provides information on 777 colleges and 18 features. The data is useful for constructing and analyzing relationships between features such as cost of attendance, admissions stats, faculty stats, and more (a detailed list is provided below).  
 
+## Visit website running on shinyapp.io server:
+```
+https://rwahler.shinyapps.io/shinyappcollegedataset/
+```
+
 ## How to run software of local installation of R
 - R >= 3.2
 - Shiny >= 1.6.0
