@@ -13,7 +13,7 @@ https://rwahler.shinyapps.io/shinyappcollegedataset/
 ```
 install.packages('shiny')
 library(shiny)
-shiny::runGitHub("shinyappCollegeDataset", "algostrat", ref="main", destdir = <your of app choice directory>)
+shiny::runGitHub("shinyappCollegeDataset", "algostrat", ref="main", destdir = <your directory choice of choice>)
 ```
 ## Description
 The user is first presented with a plotted linear regression model showing the plotted data points and fitted line. The user can modify the regresssion line through the model options menu box to the left of the plot. In the model options, a default setting is shown which buids and plots a model relating the number of students who were top 10% in their highschool to their college's out of state tuition price. The user can select any regressor(y-axis) and predictor(x-axis) feature to create and plot a model on the the graph to the right. In the model options is the choice to choose between a linear model and a smoothed loess regression model. Lastly, there is an option to split the data into private/public subset to see how the data and models behave differently between colleges that are private and those that are public. A legend is shown at the top of the plot indicating which color model fit(line) 
