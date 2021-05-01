@@ -29,10 +29,13 @@ This file contains the front end visual components. The page contains a navigati
 In the main panel exists a header for the datatable, the datatable itself, a list of the variables used and their definitions (taken from rdocumention). Next in the main panel is a section describing the source of the data, followed by a reference of links to this repository, the package dataset authors' website, and a link to an rdocumentation link for the dataset. Last is the reference to the authors of the ISLR package and corresponding book.
 
 - global.R
-The global file checks for package dependencies and installs them in needed. This file also load in the data and performs the necessary modification relevant to getting the column names. In detail, we drop the categorical variable "Private" in order to not regress or predict on it and instead provide it as a way to only subset the data into separate plotted models. 
+The global file checks for package dependencies and installs them in needed. This file also load in the data and performs the necessary modification relevant to getting the column names. In detail, we drop the categorical variable "Private" in order to not regress or predict on it and instead provide it as a way to only subset the data into separate plotted models. Also, for user readability, a more interpretable list of regressor/predictor variables are provided as compared to the original names in the data set.  
 
 - server.R
+This server file is the backend component for responsively rendering the data to the user interface (ui.R). The server is split up between a renderplot function which detects which regressor, predictor, model fit method, and if the data is to be split by private/public. "reg" and "pred" are variables used to exchange what the user chooses and how the ggplot knows what data column to use. The renderplot then plots the data using variable "g" through use of ggplot's geom_point(scatterplot) and stat_smooth(line plot) functions. FOllwing renderplot is a function the render the datatable and show the entire dataset, worth to mention is that the names of the colleges are fixed and the rows are sortable on different columns in order to explore with ease. 
 
+- gitignore
+The gitignore file is used to ignore server_local.R which is a version of the site used for testing on my local machine. 
 
 
 ## Variables in the College dataset 
