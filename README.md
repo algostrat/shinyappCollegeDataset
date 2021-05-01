@@ -49,5 +49,5 @@ James, G., Witten, D., Hastie, T., and Tibshirani, R. (2013) An Introduction to 
 
 The College dataset is from the StatLib library which is maintained at Carnegie Mellon University. The dataset was used in the ASA Statistical Graphics Section's 1995 Data Analysis Exposition.
 
-
+College: U.S. News and World Report's College Data, https://www.rdocumentation.org/packages/ISLR/versions/1.2/topics/College
 
