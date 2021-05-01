@@ -1,5 +1,5 @@
 # Shiny App College dataset 
- This project demostrates and explores combinations of linear relationships between features within the 'College' dataset provided by R's ISLR package and the News and World Report issue from 1995. Model options and a sortable datable of all the dataset is provided as well as a key for column features and descriptions.  
+ This project demostrates and explores combinations of linear relationships between features within the 'College' dataset provided by R's ISLR package and the News and World Report issue from 1995. Model options and a sortable datable of all the dataset is provided as well as a key for column features and descriptions. The College data provides information on 777 colleges and 18 features. The data is useful for constructing and analyzing relationships between features such as cost of attendance, admissions stats, faculty stats, and more (a detailed list is provided below).  
 
 ## How to run software of local installation of R
 - R >= 3.2
@@ -8,17 +8,17 @@
 ```
 install.packages('shiny')
 library(shiny)
-shiny::runGitHub("shinyappCollegeDataset","algostrat", destdir = <your app directory>)
+shiny::runGitHub("shinyappCollegeDataset", "algostrat", ref="main", destdir = <your of app choice directory>)
 ```
 ## Description
-The College data provides information on 777 colleges recorded in 1995. The data is useful for constructing and analyzing relationships to between featueres relative to College  statistcs such as cost of attendance, admissions stats, faculty stats, and more (a detailed list is provided below). The uder is first presented with a plotted linear regression model showing the plotted data points and fitted line. The user can modify the regresssion line through the model options menu box to the left of the plot. In the model options, a default setting is shown which buids and plots a model relating the percentage of students who were top 10% in their highschool to their college's out of state tuition price. The user can select any regressor(y-axis) and predictor(x-axis) feature to create and plot a model on the the graph to the right. In the model options is the choice to choose between a linear model and a smoothed loess regression model. Lastly, there is an option to split the data into private/public subset to see how the data and models behave differently between colleges that are private and those that are public. A legend is shown at the top of the plot indicating which color model fit(line) 
+The user is first presented with a plotted linear regression model showing the plotted data points and fitted line. The user can modify the regresssion line through the model options menu box to the left of the plot. In the model options, a default setting is shown which buids and plots a model relating the percentage of students who were top 10% in their highschool to their college's out of state tuition price. The user can select any regressor(y-axis) and predictor(x-axis) feature to create and plot a model on the the graph to the right. In the model options is the choice to choose between a linear model and a smoothed loess regression model. Lastly, there is an option to split the data into private/public subset to see how the data and models behave differently between colleges that are private and those that are public. A legend is shown at the top of the plot indicating which color model fit(line) 
 
 Below the plot for the regression model and model options menu is a data table showing the entire data set. A user can click on the arrows of any column header to sort Colleges by increasing/decreasing value for that feature. The user can also scroll left/right and up/down to see the entire data of 777 obervations and 18 variables while still seeing the fixed column of college names. 
 
 Below the table is more information including the list of variable names used in the data table, a decription of the datset, and a citation. This same information is provided in this readme.
 
-## Variables in the college dataset 
-(copied from R's help(College) function)
+## Variables in the College dataset 
+(Taken from R's help(College) function)
 - Private = A factor with levels No and Yes indicating private or public university
 - Apps = Number of applications received
 - Accept = Number of applications accepted
