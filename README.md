@@ -17,8 +17,8 @@ Below the plot for the regression model and model options menu is a data table s
 
 Below the table is more information including the list of variable names used in the data table, a decription of the datset, and a citation. This same information is provided in this readme.
 
-## Variables in the college dataset 
-(copied from R's help(College) function)
+## Variables in the College dataset 
+(Taken from R's help(College) function)
 - Private = A factor with levels No and Yes indicating private or public university
 - Apps = Number of applications received
 - Accept = Number of applications accepted
