@@ -18,8 +18,8 @@ cols = colnames(College)
 cols = cols[cols !="Private"]
 
 #cols
-names = c("Applications recieved","Applications accepted", "Number of new enrollees", "Number of top 10% students",
-          "Number of top 25% students", "Fulltime undergrads", "Partime undergrads", "Out of state tuition",
+names = c("Applications recieved","Applications accepted", "Number of new enrollees", "% of top 10% HS students",
+          "% of top 25% HS students", "Fulltime undergrads", "Partime undergrads", "Out of state tuition",
           "Room and Board costs", "Book costs", "Estimated personal expenditure", "% of Phd faculty",
           "% of faculty with terminal degree", "Student/faculty ratio", "% of alumni who donate",
           "Total instructional expenditure","Graduation rate")

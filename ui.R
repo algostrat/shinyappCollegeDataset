@@ -9,7 +9,7 @@ ui <- fluidPage(
   #shinythemes::themeSelector(),
   theme = shinytheme('united'),
   navbarPage("U.S. News and World Report's College Data"),
-  titlePanel("Explore linear relationships in college data"),
+  h2("Explore linear relationships in college data"),
   br(),
   sidebarLayout(
     sidebarPanel(
@@ -17,7 +17,7 @@ ui <- fluidPage(
       selectInput(inputId = "regressor", "Select regressor",
                   names,selected = "Out of state tuition"),
       selectInput(inputId = "predictor", "Select predictor",
-                  names, selected = "Number of top 10% students"),
+                  names, selected = "% of top 10% HS students"),
       selectInput(inputId = "linetype", "Choose fit", c('smooth','linear')),
       checkboxInput("privatesplit", "Group by private/public")
     ),

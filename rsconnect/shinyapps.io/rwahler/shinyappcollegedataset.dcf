@@ -5,7 +5,7 @@ account: rwahler
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4061390
-bundleId: 4542663
+bundleId: 4542682
 url: https://rwahler.shinyapps.io/shinyappcollegedataset/
-when: 1619848355.01184
-lastSyncTime: 1619848355.01184
+when: 1619848876.66068
+lastSyncTime: 1619848876.66068
